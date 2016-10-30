@@ -1,6 +1,6 @@
 {
   "generator-reveal": {
-    "presentationTitle": "Reveal.js and Yeoman is Awesomeness",
+    "presentationTitle": "rx-js-session.git",
     "packageVersion": "0.0.0",
     "useSass": true,
     "deployToGithubPages": true,
