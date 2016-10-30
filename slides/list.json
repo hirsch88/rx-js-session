@@ -2,7 +2,7 @@
     {
         "filename": "00-start.html",
         "attr": {
-            "data-background": "../resources/reactivex_bg.jpg"
+            "data-background": "resources/reactivex_bg.jpg"
         }
     },
     "01-table-of-content.html"
