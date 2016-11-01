@@ -5,6 +5,24 @@
   box-shadow: none;
 }
 
-.no-padding{
-    padding: 0 !important;
+.no-padding {
+  padding: 0 !important;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  font-family: 'Courier New', monospace !important;
+}
+
+.reveal h2 {
+  background: #FE536A;
+  padding: 15px 30px;
+  font-weight: normal;
+  color: #fff !important;
+  text-transform: none;
 }

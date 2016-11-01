@@ -1,9 +1,10 @@
 [
     {
-        "filename": "00-start.html",
-        "attr": {
-            "data-background": "./resources/reactivex_bg.jpg"
-        }
+        "filename": "00-start.html"
     },
-    "01-table-of-content.html"
+    "01-table-of-content.html",
+    "03-who.html",
+    "03-where.html",
+    "03-what.html",
+    "03-what-02.html"
 ]
