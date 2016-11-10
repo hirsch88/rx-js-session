@@ -1,6 +1,9 @@
 {
     "name": "wallaby-js-session-demo",
     "globalDependencies": {
+        "chalk": "registry:dt/chalk#0.4.0+20160317120654",
+        "es6-promise": "registry:dt/es6-promise#0.0.0+20160614011821",
+        "inquirer": "registry:dt/inquirer#0.0.0+20161101124102",
         "jasmine": "registry:dt/jasmine#2.5.0+20161003201800",
         "node": "registry:dt/node#6.0.0+20161019125345"
     },
