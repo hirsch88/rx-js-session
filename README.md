@@ -1,1 +1,1 @@
-# rx-js-session
+# wallaby-js-session
