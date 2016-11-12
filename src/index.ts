@@ -1,15 +1,14 @@
 // <reference path="./all.d.ts" />
 'use strict';
 
-import * as chalk from 'chalk';
-import * as inquirer from 'inquirer';
-
 import {
     printBanner,
     printLineBreak,
     printTurn,
     printResult,
-    printColors
+    printColors,
+    printYouWon,
+    printGameOver
 } from './printer';
 
 import {
@@ -85,11 +84,7 @@ const newGame = (): void => {
  * @returns void
  */
 const won = (): void => {
-    printLineBreak(2);
-    //TODO won
-    console.log('YOU WON!!!!!!!!!!');
-    console.log('YOU WON!!!!!!!!!!');
-    console.log('YOU WON!!!!!!!!!!');
+    printYouWon();
     newGame();
 };
 
@@ -103,11 +98,7 @@ const won = (): void => {
 const gameOver = (result: number[]): void => {
     printLineBreak();
     printColors(result);
-    printLineBreak(2);
-    //TODO gameover
-    console.log('GAME OVER!!!!!!!!!!');
-    console.log('GAME OVER!!!!!!!!!!');
-    console.log('GAME OVER!!!!!!!!!!');
+    printGameOver();
     newGame();
 };
 

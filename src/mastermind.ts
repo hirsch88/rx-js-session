@@ -10,14 +10,17 @@ export interface IMastmindResult {
     colorMatch: number
 }
 
-const getAmountPerfectMatches = (code: number[], input: number[]): number[] => {
-    return input.filter((e, i) => e === code[i]);
-    //     if (e === code[i]) {
-    //         perfectMatch++;
-    //         perfectMatchColors.push(e);
-    //     }
-    // });
-};
+// export const getAmountPerfectMatches = (code: number[], input: number[]): number[] => input.filter((e, i) => e === code[i]);
+
+// export const mastermind = (code: number[]) => (input: number[]): IMastmindResult => {
+
+//     return {
+//         code: code,
+//         input: input,
+//         perfectMatch: getAmountPerfectMatches(code, input).length,
+//         colorMatch: colorMatch
+//     };
+// };
 
 export const mastermind = (code: number[]) => (input: number[]): IMastmindResult => {
     let perfectMatch = 0;
