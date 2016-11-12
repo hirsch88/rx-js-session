@@ -14,3 +14,7 @@ export const validateUserInput = (input: string): string|boolean => pruneInput(t
 export const stringToNumberArray = (s: string): number[] => s.split('').map(c => parseInt(c, 10));
 
 export const contains = (xs: any[]) => (x: any): boolean => xs.indexOf(x) >= 0;
+
+export const generateNewCode = (): number[] => [1,2,3,4];
+
+export const getBackgoundMethod = (c: string) => `bg${c.charAt(0).toUpperCase()}${c.substring(1, c.length)}`;
