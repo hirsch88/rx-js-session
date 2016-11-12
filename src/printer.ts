@@ -7,7 +7,7 @@ import { getBackgoundMethod } from './utils';
 
 import { IMastmindResult } from './mastermind';
 
-const colors = [
+export const colors = [
     'red',
     'green',
     'yellow',
