@@ -4,8 +4,11 @@
   "description": "simple mastermind",
   "main": "src/index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "test": "gulp build && gulp test && gulp clean"
+    "start": "node ./src/index.ts",
+    "serve": "./node_modules/ts-node/dist/bin.js ./src/index.ts",
+    "clean": "./node_modules/gulp/bin/gulp.js clean",
+    "build": "npm run clean && ./node_modules/gulp/bin/gulp.js build",
+    "test": "npm run build && ./node_modules/gulp/bin/gulp.js test && npm run clean"
   },
   "repository": {
     "type": "git",

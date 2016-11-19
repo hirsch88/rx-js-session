@@ -10,43 +10,34 @@ export interface IMastmindResult {
     colorMatch: number
 }
 
-// export const getAmountPerfectMatches = (code: number[], input: number[]): number[] => input.filter((e, i) => e === code[i]);
-
-// export const mastermind = (code: number[]) => (input: number[]): IMastmindResult => {
-
-//     return {
-//         code: code,
-//         input: input,
-//         perfectMatch: getAmountPerfectMatches(code, input).length,
-//         colorMatch: colorMatch
-//     };
-// };
-
 export const mastermind = (code: number[]) => (input: number[]): IMastmindResult => {
-    let perfectMatch = 0;
-    let colorMatch = 0;
 
     let perfectMatchColors = [];
     let colorMatchColors = [];
 
     input.forEach((e, i) => {
         if (e === code[i]) {
-            perfectMatch++;
-            perfectMatchColors.push(e);
+            perfectMatchColors.push(i);
         }
     });
 
-    input.forEach((e, i) => {
-        if (contains(code)(e) && !contains(perfectMatchColors)(e) && !contains(colorMatchColors)(e)) {
-            colorMatch++;
-            colorMatchColors.push(e);
+    let codeRest = code.filter((e, i) => perfectMatchColors.indexOf(i) < 0);
+    let inputRest = input.filter((e, i) => perfectMatchColors.indexOf(i) < 0);
+
+    let colorMatch = 0;
+    for (var i = 0; i < inputRest.length; i++) {
+        for (var n = 0; n < codeRest.length; n++) {
+            if (inputRest[i] === codeRest[n]) {
+                colorMatch++;
+                codeRest[n] = 0;
+            }
         }
-    });
+    }
 
     return {
         code: code,
         input: input,
-        perfectMatch: perfectMatch,
+        perfectMatch: perfectMatchColors.length,
         colorMatch: colorMatch
     };
 };

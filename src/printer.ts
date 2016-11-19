@@ -22,21 +22,33 @@ export const printColors = (ns: number[]): void => console.log(
     ns.map(printColor).join('')
 );
 
-export const printResult = (result: IMastmindResult): void => console.log(
-    result.input.map(printColor).join('') + '   ' + printFeedback(result)
-);
-
 export const printFeedback = (result: IMastmindResult): string => {
     return chalk.bgRed(` ${result.perfectMatch} `) + chalk.bgBlack(` ${result.colorMatch} `);
 };
 
-export const printTurn = (n: number): void => console.log(chalk.gray.bold(`Turn : ${n}`));;
+export const printResult = (result: IMastmindResult): void => console.log(
+    result.input.map(printColor).join('') + '   ' + printFeedback(result)
+);
+
+export const printTurn = (n: number): void => console.log(chalk.gray.bold(`Turn : ${n}`));
 
 export const printLineBreak = (n = 1): void => {
-    if (n == 0) return;
+    if (n === 0) {
+        return
+    };
     console.log(``);
     printLineBreak(--n)
 };
+
+export const printGameTitle = (): void => {
+    printLineBreak(2);
+    console.log(chalk.blue(`    __  ___           __                      _           __`));
+    console.log(chalk.blue(`   /  |/  /___ ______/ /____  _________ ___  (_)___  ____/ /`));
+    console.log(chalk.blue(`  / /|_/ / __ \`/ ___/ __/ _ \\/ ___/ __ \`__ \\/ / __ \\/ __  / `));
+    console.log(chalk.blue(` / /  / / /_/ (__  ) /_/  __/ /  / / / / / / / / / / /_/ /  `));
+    console.log(chalk.blue(`/_/  /_/\\__,_/____/\\__/\\___/_/  /_/ /_/ /_/_/_/ /_/\\__,_/   `));
+    printLineBreak(2);
+}
 
 export const printBanner = (): void => {
     printGameTitle();
@@ -50,16 +62,6 @@ export const printBanner = (): void => {
     console.log(`Try to guess the color combination in 8 turns:`);
     printLineBreak(2);
 };
-
-export const printGameTitle = (): void => {
-    printLineBreak(2);
-    console.log(chalk.blue(`    __  ___           __                      _           __`));
-    console.log(chalk.blue(`   /  |/  /___ ______/ /____  _________ ___  (_)___  ____/ /`));
-    console.log(chalk.blue(`  / /|_/ / __ \`/ ___/ __/ _ \\/ ___/ __ \`__ \\/ / __ \\/ __  / `));
-    console.log(chalk.blue(` / /  / / /_/ (__  ) /_/  __/ /  / / / / / / / / / / /_/ /  `));
-    console.log(chalk.blue(`/_/  /_/\\__,_/____/\\__/\\___/_/  /_/ /_/ /_/_/_/ /_/\\__,_/   `));
-    printLineBreak(2);
-}
 
 export const printYouWon = (): void => {
     printLineBreak(2);

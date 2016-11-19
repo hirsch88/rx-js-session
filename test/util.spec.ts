@@ -20,15 +20,17 @@ describe('utils', () => {
           let s2 = ' 1234';
           let s3 = '1234 ';
           let s4 = '1234';
+          let s5 = '12 34';
           expect(pruneInput(s1)).toBe(s4);
           expect(pruneInput(s2)).toBe(s4);
           expect(pruneInput(s3)).toBe(s4);
           expect(pruneInput(s4)).toBe(s4);
+          expect(pruneInput(s5)).toBe(s4);
         });
 
         it('should keep only numbers between 1-6', () => {
           let s1 = ' 123456 ';
-          let s2 = '1.A,!23a457906';
+          let s2 = '1.A,!23a 457906';
           let s3 = '123456';
           expect(pruneInput(s1)).toBe(s3);
           expect(pruneInput(s2)).toBe(s3);

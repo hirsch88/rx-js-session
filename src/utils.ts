@@ -13,8 +13,6 @@ export const stringToNumberArray = (s: string): number[] => s.split('').map(c =>
 
 export const contains = (xs: any[]) => (x: any): boolean => xs.indexOf(x) >= 0;
 
-export const generateNewCode = (): number[] => [getRandomCodeDigit(), getRandomCodeDigit(), getRandomCodeDigit(), getRandomCodeDigit()];
-
 export const getBackgoundMethod = (c: string) => `bg${c.charAt(0).toUpperCase()}${c.substring(1, c.length)}`;
 
 /**
@@ -24,3 +22,5 @@ export const getBackgoundMethod = (c: string) => `bg${c.charAt(0).toUpperCase()}
 export const getRandomInt = (min: number, max: number) => (): number => Math.floor(Math.random() * (max - min + 1)) + min;
 
 export const getRandomCodeDigit = getRandomInt(1, 6);
+
+export const generateNewCode = (): number[] => [getRandomCodeDigit(), getRandomCodeDigit(), getRandomCodeDigit(), getRandomCodeDigit()];
