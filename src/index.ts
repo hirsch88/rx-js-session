@@ -1,6 +1,4 @@
 // <reference path="./all.d.ts" />
-'use strict';
-
 import {
     printBanner,
     printLineBreak,

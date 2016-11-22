@@ -1,8 +1,5 @@
 // <reference path="./all.d.ts" />
-'use strict';
-
 import * as inquirer from 'inquirer';
-
 import {
     validateUserInput,
     stringToNumberArray
@@ -12,10 +9,11 @@ export interface IAskTurnAnswer {
     colors: string;
 }
 
+// todo
 const promptUserCombination = {
     type: 'input',
     name: 'colors',
-    message: `Enter your combination(4 digits between 1-6):`,
+    message: `Enter your combination(4 digits between 1-4):`,
     validate: validateUserInput
 };
 

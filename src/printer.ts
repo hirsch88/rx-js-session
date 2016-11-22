@@ -1,19 +1,15 @@
 // <reference path="./all.d.ts" />
-'use strict';
-
 import * as chalk from 'chalk';
-
 import { getBackgoundMethod } from './utils';
-
 import { IMastmindResult } from './mastermind';
 
 export const colors = [
     'red',
     'green',
     'yellow',
-    'blue',
-    'magenta',
-    'cyan'
+    'blue'
+    // 'magenta',
+    // 'cyan'
 ];
 
 export const printColor = (n: number) => chalk[getBackgoundMethod(colors[n - 1])](` ${n} `);

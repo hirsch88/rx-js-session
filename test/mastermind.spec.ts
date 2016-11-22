@@ -61,4 +61,26 @@ describe('mastermind', () => {
         expect(info2.colorMatch).toBe(2);
     });
 
+    it('should find the corect perfect matches', () => {
+        let code = [2, 1, 2, 2];
+        let try1 = [1, 2, 2, 1];
+        let try2 = [1, 2, 1, 2];
+        let getInfo = mastermind(code);
+        let info1 = getInfo(try1);
+        let info2 = getInfo(try2);
+        expect(info1.perfectMatch).toBe(1);
+        expect(info2.perfectMatch).toBe(1);
+    });
+
+    it('should find the corect color matches', () => {
+        let code = [2, 1, 2, 2];
+        let try1 = [1, 2, 2, 1];
+        let try2 = [1, 2, 1, 2];
+        let getInfo = mastermind(code);
+        let info1 = getInfo(try1);
+        let info2 = getInfo(try2);
+        expect(info1.colorMatch).toBe(2);
+        expect(info2.colorMatch).toBe(2);
+    });
+
 });

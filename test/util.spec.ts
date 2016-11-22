@@ -34,10 +34,11 @@ describe('utils', () => {
             expect(pruneInput(s5)).toBe(s4);
         });
 
-        it('should keep only numbers between 1-6', () => {
+        //TODO add 5 and 6
+        it('should keep only numbers between 1-4', () => {
             let s1 = ' 123456 ';
             let s2 = '1.A,!23a 457906';
-            let s3 = '123456';
+            let s3 = '1234';
             expect(pruneInput(s1)).toBe(s3);
             expect(pruneInput(s2)).toBe(s3);
             expect(pruneInput(s3)).toBe(s3);
@@ -84,7 +85,7 @@ describe('utils', () => {
     });
 
     describe('getRandomInt', () => {
-        it('should return a numbers between 1-6', () => {
+        it('should return a numbers between give range', () => {
             expect(getRandomInt(1, 1)()).toBe(1)
             expect(getRandomInt(1, 2)() <= 2).toBeTruthy();
             expect(getRandomInt(1, 2)() >= 1).toBeTruthy();

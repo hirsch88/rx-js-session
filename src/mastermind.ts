@@ -1,6 +1,4 @@
 // <reference path="./all.d.ts" />
-'use strict';
-
 import { contains } from './utils';
 
 export interface IMastmindResult {
@@ -30,6 +28,7 @@ export const mastermind = (code: number[]) => (input: number[]): IMastmindResult
             if (inputRest[i] === codeRest[n]) {
                 colorMatch++;
                 codeRest[n] = 0;
+                break;
             }
         }
     }
