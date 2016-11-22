@@ -15,10 +15,6 @@ export const contains = (xs: any[]) => (x: any): boolean => xs.indexOf(x) >= 0;
 
 export const getBackgoundMethod = (c: string) => `bg${c.charAt(0).toUpperCase()}${c.substring(1, c.length)}`;
 
-/**
- * Returns a random integer between min (inclusive) and max (inclusive)
- * Using Math.round() will give you a non-uniform distribution!
- */
 export const getRandomInt = (min: number, max: number) => (): number => Math.floor(Math.random() * (max - min + 1)) + min;
 
 export const getRandomCodeDigit = getRandomInt(1, 6);
