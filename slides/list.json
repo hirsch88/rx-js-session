@@ -1,10 +1,47 @@
 [
     {
-        "filename": "00-start.html"
+        "filename": "00-intro.html"
     },
-    "01-table-of-content.html",
-    "03-who.html",
-    "03-where.html",
-    "03-what.html",
-    "03-what-02.html"
+    {
+        "filename": "01-start.html",
+        "attr": {
+            "data-background": "./resources/start-wallaby-bg.png"
+        }
+    },
+    {
+        "filename": "02-start.html"
+    },
+    {
+        "attr": {
+            "data-background": "./resources/tech-background.png"
+        }
+    },
+    {
+        "attr": {
+            "data-background": "./resources/tools.gif"
+        }
+    },
+    {
+        "filename": "03-wallaby.html"
+    },
+    {
+        "filename": "04-wallaby.html"
+    },
+    {
+        "attr": {
+            "data-background": "./resources/good-job.gif"
+        }
+    },
+    {
+        "filename": "05-who.html"
+    },
+    {
+        "filename": "06-ide.html"
+    },
+    {
+        "filename": "07-why.html"
+    },
+    {
+        "filename": "08-demo.html"
+    }
 ]
