@@ -3,6 +3,7 @@ import * as chalk from 'chalk';
 import { getBackgoundMethod } from './utils';
 import { IMastmindResult } from './mastermind';
 
+//TODO: add new colors
 export const colors = [
     'red',
     'green',

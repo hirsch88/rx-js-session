@@ -27,11 +27,13 @@ describe('utils', () => {
             let s3 = '1234 ';
             let s4 = '1234';
             let s5 = '12 34';
+            let s6 = '1256';
+            // let s7 = '12 56';
             expect(pruneInput(s1)).toBe(s4);
             expect(pruneInput(s2)).toBe(s4);
             expect(pruneInput(s3)).toBe(s4);
             expect(pruneInput(s4)).toBe(s4);
-            expect(pruneInput(s5)).toBe(s4);
+            // expect(pruneInput(s7)).toBe(s6);
         });
 
         //TODO add 5 and 6

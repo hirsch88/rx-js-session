@@ -15,7 +15,7 @@ import {
 } from '../src/printer';
 
 describe('printer', () => {
-    // todo
+    // TODO
     describe('colors', () => {
         it('should have 4 colors', () => {
             let c = colors;
