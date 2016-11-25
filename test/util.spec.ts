@@ -28,19 +28,19 @@ describe('utils', () => {
             let s4 = '1234';
             let s5 = '12 34';
             let s6 = '1256';
-            // let s7 = '12 56';
+            let s7 = '12 56';
             expect(pruneInput(s1)).toBe(s4);
             expect(pruneInput(s2)).toBe(s4);
             expect(pruneInput(s3)).toBe(s4);
             expect(pruneInput(s4)).toBe(s4);
-            // expect(pruneInput(s7)).toBe(s6);
+            expect(pruneInput(s7)).toBe(s6);
         });
 
         //TODO add 5 and 6
         it('should keep only numbers between 1-4', () => {
-            let s1 = ' 123456 ';
-            let s2 = '1.A,!23a 457906';
-            let s3 = '1234';
+            let s1 = ' 125698 ';
+            let s2 = '1.A,!25a 687907';
+            let s3 = '1256';
             expect(pruneInput(s1)).toBe(s3);
             expect(pruneInput(s2)).toBe(s3);
             expect(pruneInput(s3)).toBe(s3);

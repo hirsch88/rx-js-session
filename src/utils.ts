@@ -4,7 +4,7 @@ export const maxNumber = 4;
 export const sayHello = (): string => 'hello';
 
 //TODO add 6
-export const pruneInput = (input: string): string => input.replace(/[^1-4]/g, '');
+export const pruneInput = (input: string): string => input.replace(/[^1-6]/g, '');
 
 export const getErrorMessageForInvalidUserInput = (): string => 'Enter a valid color combi like: 1234';
 

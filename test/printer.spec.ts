@@ -17,9 +17,9 @@ import {
 describe('printer', () => {
     // TODO
     describe('colors', () => {
-        it('should have 4 colors', () => {
+        it('should have 6 colors', () => {
             let c = colors;
-            expect(c.length).toBe(4);
+            expect(c.length).toBe(6);
         });
     });
     describe('printColor', () => {

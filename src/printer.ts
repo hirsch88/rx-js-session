@@ -8,9 +8,9 @@ export const colors = [
     'red',
     'green',
     'yellow',
-    'blue'
-    // 'magenta',
-    // 'cyan'
+    'blue',
+    'magenta',
+    'cyan'
 ];
 
 export const printColor = (n: number) => chalk[getBackgoundMethod(colors[n - 1])](` ${n} `);
