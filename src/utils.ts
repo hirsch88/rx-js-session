@@ -1,4 +1,6 @@
 // <reference path="./all.d.ts" />
+
+//TODO change to 6
 export const maxNumber = 4;
 
 export const sayHello = (): string => 'hello';
